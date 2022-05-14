@@ -58,17 +58,17 @@ public abstract class AbstractTitleDoclet<O extends OWLObject> extends AbstractO
         if (subtitle != null){
             out.print("<h3>");
             out.print(subtitle);
-            try {
-                // cannot just do new URL() as this allows just about anything
-                URL url = new URI(subtitle).toURL();
-                URLUtils.renderURLLinks(url, kit, pageURL, out);
-            }
-            catch (URISyntaxException e) {
-                // do nothing - no load URL for this entity
-            }
-            catch (MalformedURLException e){
-                // do nothing - no load URL for this entity
-            }
+            // try {
+            //     // cannot just do new URL() as this allows just about anything
+            //     URL url = new URI(subtitle).toURL();
+            //     URLUtils.renderURLLinks(url, kit, pageURL, out);
+            // }
+            // catch (URISyntaxException e) {
+            //     // do nothing - no load URL for this entity
+            // }
+            // catch (MalformedURLException e){
+            //     // do nothing - no load URL for this entity
+            // }
             out.println("</h3>");
         }
     }

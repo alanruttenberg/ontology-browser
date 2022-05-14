@@ -63,11 +63,11 @@ public class OWLDocPage<O extends OWLObject> extends DefaultHTMLPage<O> {
     @Override
     protected final void renderFooter(URL pageURL, PrintWriter out) {
 
-        out.println("\n<p class='footer'>");
-        out.print("<a href='");
-        out.print(OWLHTMLConstants.HOME_PAGE);
-        out.println("' target='_blank'>OWL HTML inside</a>");
-        out.println("</p>");
+        // out.println("\n<p class='footer'>");
+        // out.print("<a href='");
+        // out.print(OWLHTMLConstants.HOME_PAGE);
+        // out.println("' target='_blank'>OWL HTML inside</a>");
+        // out.println("</p>");
 
         super.renderFooter(pageURL, out);
     }

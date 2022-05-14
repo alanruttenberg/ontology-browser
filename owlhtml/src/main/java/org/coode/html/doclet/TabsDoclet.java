@@ -8,6 +8,7 @@ import java.net.URL;
 
 import org.coode.html.OWLHTMLKit;
 import org.coode.html.impl.OWLHTMLConstants;
+import org.coode.html.impl.OWLHTMLProperty;
 import org.coode.html.util.HTMLUtils;
 import org.coode.owl.mngr.NamedObjectType;
 import org.coode.owl.mngr.ServerProperty;
@@ -66,14 +67,17 @@ public class TabsDoclet<O extends OWLObject> extends AbstractOWLDocDoclet<O> {
         }
 
         if (entitiesExist){
-            HTMLUtils.renderLink("Clouds",
-                                 kit.getURLScheme().getURLForRelativePage("cloud/"),
-                                 OWLHTMLConstants.LinkTarget.subnav,
-                                 "",
-                                 singleFrame,
-                                 pageURL,
-                                 out);
-            out.println();
+        
+            if ( kit.getHTMLProperties().isSet(OWLHTMLProperty.optionRenderOntologySummaryCloud))
+                { HTMLUtils.renderLink("Clouds",
+                                       kit.getURLScheme().getURLForRelativePage("cloud/"),
+                                       OWLHTMLConstants.LinkTarget.subnav,
+                                       "",
+                                       singleFrame,
+                                       pageURL,
+                                       out);
+                    out.println();
+                }
 
 
             // add the DL Query tab if the reasoner is enabled

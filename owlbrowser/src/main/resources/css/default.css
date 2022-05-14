@@ -1,4 +1,4 @@
-@import url("owl.css");
+/* @import url("owl.css"); Include directly */
 
 html {
     font-family: Verdana, Arial, sans-serif;
@@ -106,7 +106,7 @@ h2, h3, h4 {
 
 h3 {font-size: 10pt;
     color: #444444;
-    margin-left: 12px; margin-top: 6px; margin-bottom: 12px;
+    margin-left: 0px; margin-top: 6px; margin-bottom: 12px;
 }
 
 h4 {
@@ -118,7 +118,7 @@ h4 {
 h2, .owlselector h4 {
     font-size: 16pt;
     display: inline;
-    margin-top: 0; margin-bottom: 12px; margin-left: 6px; margin-right: 6px;
+    margin-top: 0; margin-bottom: 12px; margin-left: 0px; margin-right: 6px;
 }
 
 #menu{
@@ -161,8 +161,8 @@ div.owlselector {
 
 div.summary, #resultsForm {
     width: 65%;
-    clear: right;
-    float: right;
+    clear: right; 
+    float: left; #ALANR
     overflow-x: hidden;
 }
 
@@ -175,7 +175,7 @@ div.cloud{
 }
 
 .owlselector .codebox {
-    height: 500px;
+    height: 90vh; 
     overflow: auto;
 }
 
@@ -319,4 +319,95 @@ div.googlemaps{
 img.thumb{
     vertical-align: top;
     margin-left: 6px;
+}
+
+/* owl.css */
+
+.literal {
+    color: green;
+}
+
+.annotation-uri {
+    color: gray;
+}
+
+.ontology-uri {
+    color: #990099;
+}
+
+.active-ontology-uri {
+    color: #330033;
+}
+
+.active-entity {
+    background-color: #ffffaa;
+}
+
+.deprecated {
+    color: #222222;
+    text-decoration: line-through;
+}
+
+/* keywords - default cyan */
+.keyword {
+    color: #00B2B2;
+    font-weight: bolder;
+}
+
+.comment {
+    color: green;
+}
+
+.some, .only, .value, .min, .max, .exactly {
+    color: #B200B2;
+    font-weight:bolder;
+}
+
+.Class{
+    color: #000000;
+}
+
+a.Class:hover{
+    color: blue;
+}
+
+.Object.Property{
+    color: #004e4f;
+    font-style: italic;
+}
+
+a.Object.Property:hover{
+    color: #006363;
+    font-style: italic;
+}
+
+.Data.Property{
+    color: #18327a;
+    font-style: italic;
+}
+
+a.Data.Property:hover{
+    color: #1d3b91;
+    font-style: italic;
+}
+
+
+.Annotation.Property{
+    color: #155700;
+    font-style: italic;
+}
+
+a.Annotation.Property:hover{
+    color: #249400;
+    font-style: italic;
+}
+
+.Individual{
+    color: #000000;
+    font-style: italic;
+}
+
+a.Individual:hover{
+    color: blue;
+    font-style: italic;
 }
