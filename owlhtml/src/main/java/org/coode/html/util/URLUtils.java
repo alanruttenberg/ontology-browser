@@ -203,17 +203,17 @@ public class URLUtils {
             
             out.println(" ");
             
-            renderImageLink(kit.getURLScheme().getURLForRelativePage(OWLHTMLConstants.EXTERNAL_IMAGE),
-                            "Attempt to open link in another window",
-                            url, OWLHTMLConstants.LinkTarget._blank, "urlOption", true, pageURL, out);
+            // renderImageLink(kit.getURLScheme().getURLForRelativePage(OWLHTMLConstants.EXTERNAL_IMAGE),
+            //                 "Attempt to open link in another window",
+            //                 url, OWLHTMLConstants.LinkTarget._blank, "urlOption", true, pageURL, out);
 
             // if the ontology at this location has not already been loaded
-            if (kit.getOWLServer().getOntologyForIRI(IRI.create(url.toURI())) == null){
-                out.println(" ");
-                renderImageLink(kit.getURLScheme().getURLForRelativePage(OWLHTMLConstants.LOAD_IMAGE),
-                                "Attempt to load owl/rdf",
-                                loadURL, null, "urlOption", true, pageURL, out);
-            }
+            // if (kit.getOWLServer().getOntologyForIRI(IRI.create(url.toURI())) == null){
+            //     out.println(" ");
+            //     renderImageLink(kit.getURLScheme().getURLForRelativePage(OWLHTMLConstants.LOAD_IMAGE),
+            //                     "Attempt to load owl/rdf",
+            //                     loadURL, null, "urlOption", true, pageURL, out);
+            // }
         }
         catch (Exception e) {
             throw new RuntimeException(e);

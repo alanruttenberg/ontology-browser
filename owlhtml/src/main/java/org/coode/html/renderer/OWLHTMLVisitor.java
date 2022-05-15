@@ -963,18 +963,21 @@ public class OWLHTMLVisitor implements OWLObjectVisitor {
 
     private void writeIRIWithBoldFragment(IRI iri, Optional<String> shortForm) {
         final String fullURI = iri.toString();
+
+        write("<a href='" + fullURI + "' target='ext_ref'>") ;
         if (shortForm.isPresent()) {
             String shortFormString = shortForm.get();
             int index = fullURI.lastIndexOf(shortFormString);
             write(fullURI.substring(0, index));
-            write("<b>");
+            //            write("<b>");
             write(shortForm.get());
-            write("</b>");
+            //            write("</b>");
             write(fullURI.substring(index+shortFormString.length()));
         }
         else {
             write(fullURI);
         }
+        write("</a>");        
     }
 
     // add a span to allow for css highlighting
