@@ -33,10 +33,11 @@ public class OWLIndividualSummaryDoclet extends AbstractOWLDocDoclet<OWLNamedInd
         super(kit);
 
         addDoclet(new OWLEntityTitleDoclet<OWLNamedIndividual>(kit));
-//        addDoclet(new AnnotationsDoclet<OWLNamedIndividual>(kit));
+        addDoclet(new AnnotationsDoclet<OWLNamedIndividual>(kit));
         addDoclet(new TypesDoclet(kit));
         addDoclet(new SameAsDoclet(kit));
         addDoclet(new DifferentFromDoclet(kit));
+        addDoclet(new UsageDoclet<OWLNamedIndividual>(kit));
     }
 
     @Override
@@ -58,9 +59,9 @@ public class OWLIndividualSummaryDoclet extends AbstractOWLDocDoclet<OWLNamedInd
     public void setUserObject(OWLNamedIndividual individual) {
         super.setUserObject(individual);
         if (individual != null){
-            createAnnotationDoclets(individual);
+            //            createAnnotationDoclets(individual);
             createPropertyAssertionDoclets(individual);
-            addDoclet(new UsageDoclet<OWLNamedIndividual>(getOWLHTMLKit()));
+            // addDoclet(new UsageDoclet<OWLNamedIndividual>(getOWLHTMLKit()));
         }
     }
 

@@ -155,7 +155,7 @@ public class OWLHTMLVisitor implements OWLObjectVisitor {
     private static final String CSS_LITERAL = "literal";
 
     // the subset and equivalence symbols can be encoded in HTML
-    private static final boolean USE_SYMBOLS = true;
+    static boolean USE_SYMBOLS = false;
 
     private PrintWriter out;
 

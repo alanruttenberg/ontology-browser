@@ -22,7 +22,7 @@ public class OWLOntologySummaryDoclet extends AbstractOWLDocDoclet<OWLOntology> 
         addDoclet(new OntologyAnnotationsDoclet(kit));
 
         final OntologyContentsDoclet referencesDoclet = new OntologyContentsDoclet(kit);
-        referencesDoclet.setTitle("References");
+        referencesDoclet.setTitle("Entities");
         addDoclet(referencesDoclet);
 
         addDoclet(new OntologyImportsDoclet(kit));

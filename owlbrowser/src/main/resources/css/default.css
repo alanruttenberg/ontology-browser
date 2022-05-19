@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-color: #f1f5f9;
+/*    background-color: #f1f5f9; */
     font-size: 9pt;
     padding: 5px;
     width: 90%; margin-left: auto; margin-right: auto;
@@ -100,24 +100,27 @@ h1 {font-size: 16pt;
     margin-top: 0; margin-bottom: 12px;
 }
 
-h2, h3, h4 {
+h2, h3 {
     font-weight: normal;
 }
 
+
 h3 {font-size: 10pt;
-    color: #444444;
+/*    color: #444444;*/
     margin-left: 0px; margin-top: 6px; margin-bottom: 12px;
 }
 
 h4 {
-    font-size: 10pt;
+    font-size: 11pt;
     margin-top: 0; margin-bottom: 3px; margin-left: 3px;
     display: inline;
+    font-weight: normal;
 }
 
 h2, .owlselector h4 {
-    font-size: 16pt;
+    font-size: 14pt;
     display: inline;
+    font-weight: normal;
     margin-top: 0; margin-bottom: 12px; margin-left: 0px; margin-right: 6px;
 }
 
@@ -141,15 +144,17 @@ h2, .owlselector h4 {
 }
 
 #tabs {
-    color: #aaaacc;
+/*    color: #aaaacc; */
     margin-bottom: 16px;
 }
 #tabs a, #tabs span.currentpage {
     color: #000000;
-    background-color: #ffffff;
-    border: solid 1px #c7cfd5;
-    border-top: none;
-    padding: 2px;
+    font-size: larger;
+    background-color: #eeeeee;
+    border: solid 2px #cccccc; 
+    text-decoration: none;
+/*    border-top: none; */
+    padding: 4px;
 }
 
 div.owlselector {
@@ -193,9 +198,21 @@ a:hover {
 
 /* we want links in literals to look like links*/
 .literal a {
+    color: #003366;
+    text-decoration: underline;
+}
+
+.literal a:hover {
     color: blue;
     text-decoration: underline;
 }
+
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
 
 a.subsexpand {
     color: #555555;
@@ -326,7 +343,7 @@ img.thumb{
 /* owl.css */
 
 .literal {
-    color: green;
+    color: #003366;
 }
 
 .annotation-uri {
@@ -342,7 +359,7 @@ img.thumb{
 }
 
 .active-entity {
-    background-color: #ffffaa;
+    background-color: #ffffdd;
 }
 
 .deprecated {
@@ -352,8 +369,8 @@ img.thumb{
 
 /* keywords - default cyan */
 .keyword {
-    color: #00B2B2;
-    font-weight: bolder;
+    color: #009282; 
+    font-weight: normal;
 }
 
 .comment {
@@ -362,7 +379,7 @@ img.thumb{
 
 .some, .only, .value, .min, .max, .exactly {
     color: #B200B2;
-    font-weight:bolder;
+    font-weight:normal;
 }
 
 .Class{
@@ -374,42 +391,42 @@ a.Class:hover{
 }
 
 .Object.Property{
-    color: #004e4f;
-    font-style: italic;
+/*    color: #004e4f; */
+/*    font-style: italic; */
 }
 
 a.Object.Property:hover{
-    color: #006363;
-    font-style: italic;
+    color: blue;
+/*    font-style: italic; */
 }
 
 .Data.Property{
-    color: #18327a;
-    font-style: italic;
+/*    color: #18327a; */
+/*    font-style: italic; */
 }
 
 a.Data.Property:hover{
-    color: #1d3b91;
-    font-style: italic;
+    color: blue;
+/*    font-style: italic; */
 }
 
 
 .Annotation.Property{
-    color: #155700;
-    font-style: italic;
+ /*   color: #155700; */
+/*    font-style: italic; */
 }
 
 a.Annotation.Property:hover{
-    color: #249400;
-    font-style: italic;
+    color: blue;
+/*    font-style: italic; */
 }
 
 .Individual{
     color: #000000;
-    font-style: italic;
+/*    font-style: italic; */
 }
 
 a.Individual:hover{
     color: blue;
-    font-style: italic;
+/*    font-style: italic; */
 }

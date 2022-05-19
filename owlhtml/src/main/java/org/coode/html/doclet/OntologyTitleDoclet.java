@@ -49,9 +49,9 @@ public class OntologyTitleDoclet extends AbstractTitleDoclet<OWLOntology> {
     protected void renderHeader(URL pageURL, PrintWriter out) {
         super.renderHeader(pageURL, out);
         IRI docIRI = getOWLHTMLKit().getOWLServer().getOWLOntologyManager().getOntologyDocumentIRI(getUserObject());
-        if (!docIRI.equals(getUserObject().getOntologyID().getDefaultDocumentIRI())) {
-            out.println("<h3>Loaded from " + docIRI + "</h3>");
-        }
+        //        if (!docIRI.equals(getUserObject().getOntologyID().getDefaultDocumentIRI())) {
+        //            out.println("<h3>Loaded from " + docIRI + "</h3>");
+        //}
     }
 
     @Override
@@ -64,10 +64,10 @@ public class OntologyTitleDoclet extends AbstractTitleDoclet<OWLOntology> {
         if (getUserObject().isAnonymous()) {
             return null;
         }
-        String s = getUserObject().getOntologyID().getOntologyIRI().get().toString();
+        String s = "Ontology IRI: " + getUserObject().getOntologyID().getOntologyIRI().get().toString();
         IRI versionIRI = getUserObject().getOntologyID().getVersionIRI().orNull();
         if (versionIRI != null) {
-            s += "<br />" + versionIRI.toString();
+            s += "<br />" + "Version IRI: " + versionIRI.toString();
         }
         return s;
     }
